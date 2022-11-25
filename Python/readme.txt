@@ -1,2 +1,1 @@
-This folder is to place pseudocode/python implementation of six algorithms.
-
+Dùng python hoặc pseudo để implement 6 thuật toán
