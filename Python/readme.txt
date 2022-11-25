@@ -1,1 +1,1 @@
-Dùng python hoặc pseudo để implement 6 thuật toán
+Dùng python hoặc pseudocode để implement 6 thuật toán
