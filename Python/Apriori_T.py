@@ -45,32 +45,24 @@ class Apriori:
 
 def main():
     D = [{1, 3, 4}, {2, 3, 5}, {1, 2, 3, 5}, {2, 5}, {1, 2, 3, 5}]
-    # D = [{0, 1},
-    #           {0, 2, 3, 4},
-    #           {1, 2, 3, 5},
-    #           {0, 1, 2, 3},
-    #           {0, 1, 2, 5}]
-
-    X =        [{0, 1},
-              {0, 2, 3, 4},
-              {1, 2, 3, 5},
-              {0, 1, 2, 3},
-              {0, 1, 2, 5}]
     minsup = 0.4
     start = time.time()
     F = Apriori(D, minsup)
-    F = F.Apriori()
-    for i in range(len(F)):
-        S = []
-        for j in F[i]:
-            S.append(list(j))
-        print(str(i + 1) + "-itemsets: " + str(S))
-    print(S)
 
+
+    a = F.Apriori()
+    for i in range(len(a)):
+        S = []
+        for j in a[i]:
+            S.append((list(j), F.sup(j)))
+        print(str(i + 1) + "-itemsets: " + str(S))
+    
+
+    # for i in range(len(F.Apriori())):
+    #     print("Frequent " + str(i + 1) + "-itemsets: " + str(F[i]))
     end = time.time()
     elapsed = (end - start) * 1000
     print("Time taken: %f ms" % elapsed)
     #print('check support:', F.CandidateGeneration(F.freq_1(D)))
 if __name__ == "__main__":
     main()
-    
