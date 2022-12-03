@@ -38,8 +38,8 @@ def eclat(R, minsup):
         itemset_1 = []
         for i in R:
             if len(R[i])>=minsup:
-                itemset_1.append(i)
-        true_res.append([itemset_1])
+                itemset_1.append([i])
+        true_res.append(itemset_1)
         
     check_repeat = []
     R_ = {}
